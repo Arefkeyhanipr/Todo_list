@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(2, 175, 198);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 175, 198, 1) 0%,
+    rgba(252, 106, 229, 1) 48%,
+    rgba(107, 210, 0, 1) 100%
+  );
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  min-height: 100vh;
+}
+
+header {
+  font-size: 1.5rem;
+}
+
+header,
+form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form input,
+form button {
+  padding: 0.5rem;
+  font-size: 2rem;
+  border: none;
+  background: white;
+}
+form input {
+  border-radius: 4px 0 0 4px;
+}
+form button {
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  color: rgb(27, 76, 27);
+  background-color: white;
+}
+
+form button:hover {
+  border: 0.5px solid black;
+  color: white;
+  background-color: rgb(27, 76, 27);
+}
