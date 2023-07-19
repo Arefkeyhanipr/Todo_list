@@ -5,10 +5,12 @@ const todoList = document.querySelector(".todo-list");
 
 //Event Listener
 todoButton.addEventListener("click", addTodo);
+todoList.addEventListener("click", deleteTodo);
+todoList.addEventListener("click", completeTodo);
 
 // Function
 
-function addTodo(event) {
+function addTodo(e) {
   //Prevent from submiting and reloading the project
   event.preventDefault();
   //Create Todo Div
@@ -36,4 +38,18 @@ function addTodo(event) {
   todoDiv.appendChild(trashButton);
   //empty the input after adding a todo in the list
   todoInput.value = "";
+}
+
+function deleteTodo(e) {
+  const item = e.target;
+  //Delete
+  if (item.classList[0] === "trash-button") {
+    const todo = item.parentElement;
+    todo.remove();
+  }
+  //Completed
+  if (item.classList[0] === "complete-button") {
+    const todo = item.parentElement;
+    todo.classList.toggle("completed");
+  }
 }
