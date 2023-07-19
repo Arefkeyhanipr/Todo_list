@@ -53,6 +53,7 @@ function deleteTodo(e) {
       todo.addEventListener("transitionend", () => todo.remove());
     });
   }
+
   //Completed
   if (item.classList[0] === "complete-button") {
     const todo = item.parentElement;
