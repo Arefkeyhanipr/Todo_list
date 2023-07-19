@@ -6,12 +6,7 @@
 
 body {
   background: rgb(2, 175, 198);
-  background: linear-gradient(
-    90deg,
-    rgba(2, 175, 198, 1) 0%,
-    rgba(252, 106, 229, 1) 48%,
-    rgba(107, 210, 0, 1) 100%
-  );
+  background: linear-gradient(90deg, #fc466b 0%, #3f5efb 100%);
   color: white;
   font-family: "Montserrat", sans-serif;
   min-height: 100vh;
@@ -42,12 +37,11 @@ form input {
 form button {
   border-radius: 0 4px 4px 0;
   cursor: pointer;
-  color: rgb(27, 76, 27);
+  color: #0066b2;
   background-color: white;
 }
 
 form button:hover {
-  border: 0.5px solid black;
   color: white;
-  background-color: rgb(27, 76, 27);
+  background-color: #0066b2;
 }
