@@ -13,7 +13,7 @@ function addTodo(event) {
   event.preventDefault();
   //Create Todo Div
   const todoDiv = document.createElement("div");
-  todoDiv.classList.add("todo-Div");
+  todoDiv.classList.add("todo-div");
   //Append the div to the list of todos
   todoList.appendChild(todoDiv);
   //Create the LI
@@ -24,8 +24,8 @@ function addTodo(event) {
   todoDiv.appendChild(newTodoLi);
   //Completed Button
   const completedButton = document.createElement("button");
-  completedButton.innerHTML = '<i class="fas fa-ckeck"></i>';
-  completedButton.classList.add("compelete-button");
+  completedButton.innerHTML = '<i class="fas fa-check"></i>';
+  completedButton.classList.add("complete-button");
   //Append the Completed btn to the Div
   todoDiv.appendChild(completedButton);
   //Trash button
@@ -34,4 +34,6 @@ function addTodo(event) {
   trashButton.classList.add("trash-button");
   //Append the trash btn to the Div
   todoDiv.appendChild(trashButton);
+  //empty the input after adding a todo in the list
+  todoInput.value = "";
 }
