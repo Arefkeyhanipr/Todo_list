@@ -45,7 +45,13 @@ function deleteTodo(e) {
   //Delete
   if (item.classList[0] === "trash-button") {
     const todo = item.parentElement;
-    todo.remove();
+    //Animation
+    todo.classList.add("fall");
+
+    todo.addEventListener("transitionend", function () {
+      todo.classList.add("faid-out");
+      todo.addEventListener("transitionend", () => todo.remove());
+    });
   }
   //Completed
   if (item.classList[0] === "complete-button") {
