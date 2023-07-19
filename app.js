@@ -46,10 +46,10 @@ function deleteTodo(e) {
   if (item.classList[0] === "trash-button") {
     const todo = item.parentElement;
     //Animation
-    todo.classList.add("fall");
+    todo.classList.add("faid-out");
 
     todo.addEventListener("transitionend", () => {
-      todo.classList.add("faid-out");
+      todo.classList.add("fall");
       todo.addEventListener("transitionend", () => todo.remove());
     });
   }
