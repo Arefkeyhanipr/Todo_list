@@ -6,7 +6,7 @@ const filterOption = document.querySelector(".filter-todo");
 
 //Event Listener
 todoButton.addEventListener("click", addTodo);
-todoList.addEventListener("click", deleteTodo);
+todoList.addEventListener("click", deleteAndDoneTodo);
 filterOption.addEventListener("click", filterTodo);
 
 // Function
@@ -41,7 +41,7 @@ function addTodo(e) {
   todoInput.value = "";
 }
 
-function deleteTodo(e) {
+function deleteAndDoneTodo(e) {
   const item = e.target;
   //Delete
   if (item.classList[0] === "trash-button") {
