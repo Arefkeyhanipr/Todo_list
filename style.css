@@ -72,6 +72,12 @@ form button:hover {
   flex: 1;
 }
 
+.todo-item {
+  padding: 0 0.5rem;
+}
+
+/* complete and trash btn */
+
 .trash-button,
 .complete-button {
   color: white;
@@ -81,29 +87,26 @@ form button:hover {
   font-size: 1rem;
 }
 .complete-button {
-  background-color: rgb(20, 68, 20);
+  background-color: rgb(53, 97, 53);
 }
 .complete-button:hover {
-  background-color: rgb(39, 144, 39);
+  background-color: rgb(75, 194, 75);
 }
 
 .trash-button {
   border-left: 1px rgba(75, 173, 234, 0.589) solid;
-  background-color: rgb(122, 42, 42);
+  background-color: rgb(150, 27, 27);
 }
 
 .trash-button:hover {
   background-color: rgb(211, 10, 10);
 }
 
-.todo-item {
-  padding: 0 0.5rem;
-}
-
 .fa-trash,
 .fa-check {
   pointer-events: none;
 }
+/* Animations */
 
 .completed {
   text-decoration: line-through;
@@ -118,4 +121,46 @@ form button:hover {
 .fall {
   transform: translateY(8rem) translateX(30rem) rotateZ(10deg);
   opacity: 0;
+}
+
+/* Options */
+
+select {
+  border: none;
+  appearance: none;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+select {
+  color: #0066b2;
+  width: 10rem;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.div-select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.div-select::after {
+  content: "\25BC";
+  position: absolute;
+  background: #0066b2;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  pointer-events: none;
+  transition: all 0.4s ease;
+  border-radius: 0 4px 4px 0;
+}
+
+.div-select:hover::after {
+  background-color: white;
+  color: #0066b2;
+  transform: rotate(90deg);
 }
